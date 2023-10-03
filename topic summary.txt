@@ -1,0 +1,33 @@
+custom hooks are just like any other function with 'use' attached to its name.
+eg. 
+    useFunctionName = () => {
+        ...
+    }
+
+
+
+Hooks can return an array or an object.
+
+
+
+In case of an array returned-
+eg.
+    return [dataName, toggle];
+
+Here, 'dataName' and 'toggle' can be states or functions, or whatever.
+Where we are receiving/using this data using the custom hook, there we can reference 'dataName' and 'toggle' by any other name that we want.
+eg.
+    const [ myDataName, toggle2 ] = useFunctionName();
+
+
+
+In case of an object returned-
+eg.
+    return { dataName, toggle };
+
+Here, we have to use same name. If we want to change name, we can do it like this-
+eg.
+    const { dataName: myName, toggle: toggle2} = useFunctionName();
+
+
+----------------------------------------------------------------------------------------------
